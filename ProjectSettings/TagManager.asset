@@ -12,6 +12,8 @@ TagManager:
   - 20
   - 25
   - Fork
+  - New Tag
+  - InputManager
   layers:
   - Default
   - TransparentFX
