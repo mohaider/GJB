@@ -44,16 +44,16 @@ public class UIEventHandler : MonoBehaviour {
 
 				break;
 			case UIEvents.SINGLE1:
-				Application.LoadLevel(level1SceneName);
+				Application.LoadLevel(1);
 				break;
 			case UIEvents.SINGLE2:
-				Application.LoadLevel(level2SceneName);
+				Application.LoadLevel(2);
 				break;
 			case UIEvents.SINGLE3:
-				Application.LoadLevel(level3SceneName);
+				Application.LoadLevel(3);
 				break;
 			case UIEvents.MULTI1:
-				Application.LoadLevel(multiplayerlevelSceneName);
+				Application.LoadLevel(4);
 				break;
 			case UIEvents.LEADERBOARD:
 				leaderBoardCanvas.SetActive(true);
