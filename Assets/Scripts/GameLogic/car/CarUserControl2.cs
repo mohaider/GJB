@@ -1,67 +1,47 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using Assets.Scripts.GameLogic.Controls;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
 
     [RequireComponent(typeof (CarController))]
-    public class CarUserControl2 : MonoBehaviour, IPausable
+    public class CarUserControl2 : MonoBehaviour
     {
-
+		private ConfigurableJoint cj ;
         private CarController m_Car; // the car controller we want to use
 		public bool UsingKeyboard;
-		bool isPaused;
 
         private void Awake()
         {
             // get the car controller
             m_Car = GetComponent<CarController>();
-			isPaused = false;
+			cj = GetComponent<ConfigurableJoint> ();
+			GameObject oj = GameObject.FindGameObjectWithTag ("Fork");
+			cj.connectedBody = oj.GetComponent<Rigidbody> ();
         }
-		public void PauseSignal()
-		{
-			isPaused = !isPaused;
-		}
+
 
         private void FixedUpdate()
         {
-			if(!isPaused){
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-
-
+		
 			float horizontalRightStick = CrossPlatformInputManager.GetAxis ("RT");
 			float verticalRightStick = CrossPlatformInputManager.GetAxis ("LT")*-1f;
-
-				float outputV =0;
-
-				outputV = horizontalRightStick + verticalRightStick;
-					 
-
-			//Debug.Log (horizontalRightStick);
-			//Debug.Log (verticalRightStick);
+			float output = horizontalRightStick + verticalRightStick;
+			Debug.Log ("hv " +horizontalRightStick);
+			Debug.Log ("vv "+verticalRightStick);
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 			if(!UsingKeyboard)
-					m_Car.Move(h, outputV, outputV, handbrake);
+				m_Car.Move(h, output, output, handbrake);
 			else
 				m_Car.Move(h, v, v, handbrake);
 #else
             m_Car.Move(h, v, v, 0f);
 #endif
-		}
         }
-
-		public bool IsPaused{
-			get{
-				return isPaused;	
-			}
-			set {
-				isPaused = value;
-			}
-		}
     }
 }

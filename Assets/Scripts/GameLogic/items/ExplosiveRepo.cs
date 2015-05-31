@@ -11,7 +11,7 @@ public class ExplosiveRepo : MonoBehaviour {
 
 	}
 
-	public  ExplosionState explosiveState;
+	public  ExplosionState currentexplosiveState;
 
 
 
@@ -38,6 +38,11 @@ public class ExplosiveRepo : MonoBehaviour {
 	void Start () {
 	
 	}
+
+	void Awake()
+	{
+
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -46,20 +51,39 @@ public class ExplosiveRepo : MonoBehaviour {
 
 	public GameObject ReturnLargeExplosion()
 	{
-		return gameObject;
+		if (currentexplosiveState == ExplosionState.CLASSICEXPLOSION) {
+			return 	Resources.Load ("Jeff/Explosion_Huge_Classic") as GameObject;
+		} else {
+			return 	Resources.Load ("Jeff/Explosion_Huge_Purple") as GameObject;
+		}
+
 	}
 
 	public GameObject ReturnMediumExplosion()
 	{
-		return gameObject;
+		if (currentexplosiveState == ExplosionState.CLASSICEXPLOSION) {
+			return 	Resources.Load ("Jeff/Explosion_Medium_Classic")as GameObject;
+		} else {
+			return 	Resources.Load ("Jeff/Explosion_Medium_Purple")as GameObject;
+		}
 
 
 	}
+public GameObject ReturnSpecialExplosion()
+{
+
+		return 	Resources.Load ("Jeff/Explosion_Huge_Purple_Sim")as GameObject;
+	
+}
 
 	public GameObject ReturnSmallExplosion()
 	{
 
-		return gameObject;
+		if (currentexplosiveState == ExplosionState.CLASSICEXPLOSION) {
+			return 	Resources.Load ("Jeff/Explosion_Small_Classic")as GameObject;
+		} else {
+			return 	Resources.Load ("Jeff/Explosion_Small_Purple")as GameObject;
+		}
 
 	}
 	

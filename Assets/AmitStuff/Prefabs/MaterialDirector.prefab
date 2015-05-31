@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wood: {fileID: 13400000, guid: 92e1ff6fd5bd94cd4b9d31830d45d30d, type: 2}
-  Cardboard: {fileID: 13400000, guid: 92e1ff6fd5bd94cd4b9d31830d45d30d, type: 2}
+  Cardboard: {fileID: 13400000, guid: 721555161101bf84abd721d99ff244ef, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

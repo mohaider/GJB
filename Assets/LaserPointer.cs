@@ -22,7 +22,7 @@ public class LaserPointer : MonoBehaviour {
 		m_lineRenderer.SetColors (m_PointerLight.color, m_PointerLight.color);
 		m_lineRenderer.SetWidth (maxWidth,maxWidth);
 		m_lineRenderer.material = mat;
-		
+		lift = GameObject.FindGameObjectWithTag ("Player");
 	}
 	
 	// Update is called once per frame
@@ -34,7 +34,7 @@ public class LaserPointer : MonoBehaviour {
 		
 		
 		if (Physics.SphereCast (tPosition, 0.5f,forwardVector, out m_hit, MaxDistance,m_LayerMask)) {
-			print ("colliding!~");
+
 			Vector3 hitpoint =transform.position+ forwardVector * m_hit.distance;
 			m_PointerLight.transform.position = hitpoint;
 			m_lineRenderer.SetPosition (1, hitpoint);
