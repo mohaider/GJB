@@ -2627,6 +2627,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 11406048, guid: 0990b42566997044186e225ecf9fd3a8, type: 2}
+      propertyPath: nextMapInt
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0990b42566997044186e225ecf9fd3a8, type: 2}
   m_IsPrefabParent: 0
@@ -9321,7 +9325,7 @@ Transform:
   - {fileID: 1749327733}
   - {fileID: 1093953452}
   m_Father: {fileID: 0}
-  m_RootOrder: 113
+  m_RootOrder: 53
 --- !u!64 &1958851974
 MeshCollider:
   m_ObjectHideFlags: 0

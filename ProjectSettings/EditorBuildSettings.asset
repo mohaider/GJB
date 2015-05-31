@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/_Levels/Jerome/Level 3 - The Stack.unity
   - enabled: 1
     path: Assets/_Levels/Cedrick/Cedrick_Desgagne_Level.unity
+  - enabled: 1
+    path: Assets/_Levels/Jeff/Level000.unity

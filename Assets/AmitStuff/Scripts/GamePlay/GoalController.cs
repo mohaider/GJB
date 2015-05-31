@@ -10,6 +10,7 @@ public class GoalController : MonoBehaviour {
 	bool first = true;
 
 	public string nextMap;
+	public int nextMapInt;
 
 	float nextMapTimer = 0.0f;
 	bool nextmap = false;
@@ -43,7 +44,7 @@ public class GoalController : MonoBehaviour {
 		if (nextmap) {
 			nextMapTimer += Time.deltaTime;
 			if (nextMapTimer > 5.0f) {
-				Application.LoadLevel(nextMap);
+				Application.LoadLevel(nextMapInt);
 			}
 		}
 	}
