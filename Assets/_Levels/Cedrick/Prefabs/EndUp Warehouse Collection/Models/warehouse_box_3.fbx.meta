@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a87eee6e36736c2429d8146bc0c631b3
+guid: 5ef40bd8cd745f6478d67f083e11a335
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
@@ -15,10 +15,10 @@ ModelImporter:
     3300002: Omni01
     4300000: BOX2
     4300002: Omni01
-    9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 3
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -35,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -49,7 +49,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 0
@@ -69,7 +69,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

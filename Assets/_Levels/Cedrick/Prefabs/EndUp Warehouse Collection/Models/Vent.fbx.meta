@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 944bd69687a10644889b56f9f898f2ed
+guid: 4f3c7b6fa76a71146a9f114abfdaecf1
+timeCreated: 1431058757
+licenseType: Store
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
@@ -8,7 +10,6 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: U3DMesh
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -28,7 +29,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -62,7 +63,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
