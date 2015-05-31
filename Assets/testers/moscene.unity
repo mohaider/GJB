@@ -263,6 +263,7 @@ GameObject:
   - 124: {fileID: 218386140}
   - 81: {fileID: 218386139}
   - 114: {fileID: 218386138}
+  - 114: {fileID: 218386144}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -346,6 +347,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &218386144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218386137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4f388b5aa3058439e787dc8e0869c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &455498984
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +459,7 @@ Terrain:
   m_GameObject: {fileID: 697422233}
   m_Enabled: 1
   serializedVersion: 3
-  m_TerrainData: {fileID: 15600000, guid: adb8db66e99221e468de06079a572630, type: 2}
+  m_TerrainData: {fileID: 0}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -581,6 +593,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477668, guid: 96d16e8450f3dc24cae39258e235ed2a, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164194, guid: 96d16e8450f3dc24cae39258e235ed2a, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
