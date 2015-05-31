@@ -48,7 +48,6 @@ GameObject:
   - 92: {fileID: 9287768}
   - 124: {fileID: 12496262}
   - 81: {fileID: 8152048}
-  - 114: {fileID: 11462504}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -151,8 +150,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126472}
-  m_LocalRotation: {x: .0853281021, y: -.237020239, z: .020903334, w: .967524469}
-  m_LocalPosition: {x: -0, y: 0, z: 7.82999992}
+  m_LocalRotation: {x: 0, y: 6.33250039e-08, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 482958}
@@ -276,7 +275,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_HDR: 1
+  m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
@@ -565,22 +564,6 @@ MonoBehaviour:
   visualiseInEditor: 1
   closestDistance: .5
   dontClipTag: Player
---- !u!114 &11462504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c12500f3afdeb24d9444042960a4cb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloomIntensity: .125
-  shader: {fileID: 4800000, guid: 6581f8d2f208b8340b8d59c7bf38cc9a, type: 3}
-  lensDirtTexture: {fileID: 2800000, guid: abe02d2cbc2af2248b68befc6b0a5d74, type: 3}
-  lensDirtIntensity: .0869999975
-  inputIsHDR: 1
 --- !u!114 &11489714
 MonoBehaviour:
   m_ObjectHideFlags: 1
