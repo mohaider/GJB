@@ -28,12 +28,7 @@ public class ForkLiftController : MonoBehaviour {
 			upPressed = downPressed = false;
 			return;
 		}
-		if (upPressed || downPressed) {
-			forkLiftRigidBody.constraints = ~RigidbodyConstraints.FreezePosition;// | RigidbodyConstraints.FreezeRotation;
-			
-		} else {
-			forkLiftRigidBody.constraints = RigidbodyConstraints.FreezePositionY;// | RigidbodyConstraints.FreezeRotation;
-		}
+
 		if (Input.GetButton("ForkliftUp")) {
 			
 			if (!upPressed) {
@@ -48,7 +43,7 @@ public class ForkLiftController : MonoBehaviour {
 			liftMoveTimer += Time.deltaTime / ratio;
 		}
 		else if (Input.GetButtonUp("ForkliftUp")) {
-			upPressed = false;
+			upPressed = downPressed = false;
 		}
 		
 		if (allowedDownMovement && Input.GetButton("ForkliftDown")) {
@@ -64,7 +59,7 @@ public class ForkLiftController : MonoBehaviour {
 			liftMoveTimer += Time.deltaTime / ratio;
 		}
 		else if (Input.GetButtonUp ("ForkliftDown")) {
-			downPressed = false;
+			upPressed = downPressed = false;
 		}
 	}
 	
