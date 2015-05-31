@@ -10,8 +10,6 @@ public class ForkLiftController : MonoBehaviour {
 
 	private Vector3 currentPos;
 	private float liftMoveTimer;
-//	private int gear;
-//	private float powerUpwards, powerDownwards;
 
 	private Rigidbody forkLiftRigidBody;
 
@@ -22,19 +20,10 @@ public class ForkLiftController : MonoBehaviour {
 
 		distanceBetweenTopBot = (topPos - botPos).magnitude;
 		upPressed = downPressed = false;
-
-//		gear = 0;
-//		shiftGearUp ();
 	}
-
+	
 	// Update is called once per frame
-	void FixedUpdate () {
-//		if (Input.GetKeyDown (KeyCode.K)) {
-//			shiftGearDown();
-//		} else if (Input.GetKeyDown (KeyCode.L)) {
-//			shiftGearUp();
-//		}
-
+	void Update () {
 		if (Input.GetKey (KeyCode.P) && Input.GetKey (KeyCode.O)) {
 			upPressed = downPressed = false;
 			return;
@@ -61,7 +50,7 @@ public class ForkLiftController : MonoBehaviour {
 		else if (Input.GetKeyUp(KeyCode.P)) {
 			upPressed = false;
 		}
-		if (Input.GetKey (KeyCode.O)) {
+		if (allowedDownMovement && Input.GetKey (KeyCode.O)) {
 			if (!downPressed) {
 				downPressed = true;
 				liftMoveTimer = 0.0f;
@@ -78,23 +67,8 @@ public class ForkLiftController : MonoBehaviour {
 		}
 	}
 
-//	void shiftGearDown() {
-//		gear--;
-//		if (gear < 1) {
-//			gear = 1;
-//		}
-//		powerUpwards = 20.0f - Physics.gravity;
-//		powerDownwards = 20.0f;
-//	}
-//
-//	void shiftGearUp() {
-//		gear++;
-//
-//		powerUpwards = 20.0f + Physics.gravity;
-//		powerDownwards = 20.0f;
-//	}
-
 	void MoveForkUp() {
+		allowedDownMovement = true;
 		forkLiftRigidBody.AddForce(Vector3.up * 20.0f, ForceMode.Acceleration);
 		forkLiftRigidBody.velocity = Vector3.zero;
 		forkLiftRigidBody.angularVelocity = Vector3.zero;
@@ -107,5 +81,12 @@ public class ForkLiftController : MonoBehaviour {
 		forkLiftRigidBody.angularVelocity = Vector3.zero;
 
 		//this.transform.localPosition = new Vector3(0.0f, Mathf.Lerp(currentPos.y, botPos.y, liftMoveTimer), 1.16f);
+	}
+
+	bool allowedDownMovement = false;
+	public void StopDownMovement() {
+		MoveForkUp ();
+		allowedDownMovement = false;
+
 	}
 }
