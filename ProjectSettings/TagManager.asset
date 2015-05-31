@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Explosive
+  - Moveable
+  - 5
+  - 10
+  - 15
+  - 20
+  - 25
   layers:
   - Default
   - TransparentFX
