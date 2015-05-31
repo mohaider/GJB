@@ -23,6 +23,7 @@ public class StickTogether : MonoBehaviour {
 
 		if (stickedTogether) {
 			if (col.name.Contains("Fork") || col.name.Contains("CrashBlocker")) {
+				Debug.Log("Separate Sticked Together");
 				if (myJoint != null) {
 					Destroy(temp);
 					stickedTogether = false;
