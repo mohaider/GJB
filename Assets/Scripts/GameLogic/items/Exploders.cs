@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Exploders : MonoBehaviour {
 	public float explosiveForce;
+	public float explosiveRadius;
 	Rigidbody thisRigidBody;
 
 	void Awake()
@@ -24,6 +25,7 @@ public class Exploders : MonoBehaviour {
 	}
 	public void Explode()
 	{
-
+		thisRigidBody.AddExplosionForce (explosiveForce, transform.position, explosiveRadius);
+		Destroy (gameObject);
 	}
 }
