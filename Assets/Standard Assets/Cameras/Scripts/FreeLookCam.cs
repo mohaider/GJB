@@ -2,9 +2,10 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
+
 namespace UnityStandardAssets.Cameras
 {
-    public class FreeLookCam : PivotBasedCameraRig
+	public class FreeLookCam : PivotBasedCameraRig 
     {
         // This script is designed to be placed on the root object of a camera rig,
         // comprising 3 gameobjects, each parented to the next:
@@ -28,6 +29,12 @@ namespace UnityStandardAssets.Cameras
 		private Quaternion m_PivotTargetRot;
 		private Quaternion m_TransformTargetRot;
 		public bool usingMouse=false;
+		bool isPaused;
+		public void PauseSignal()
+		{
+			isPaused = !isPaused;
+		}
+
         protected override void Awake()
         {
             base.Awake();
@@ -118,5 +125,13 @@ namespace UnityStandardAssets.Cameras
 				transform.localRotation = m_TransformTargetRot;
 			}
         }
+		public bool IsPaused{
+			get{
+				return isPaused;	
+			}
+			set {
+				isPaused = value;
+			}
+		}
     }
 }
