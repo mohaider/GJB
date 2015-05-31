@@ -6,11 +6,11 @@ PhysicMaterial:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Wood
-  dynamicFriction: .449999988
-  staticFriction: .449999988
+  dynamicFriction: .600000024
+  staticFriction: .600000024
   bounciness: 0
-  frictionCombine: 0
-  bounceCombine: 0
+  frictionCombine: 2
+  bounceCombine: 1
   frictionDirection2: {x: 0, y: 0, z: 0}
   dynamicFriction2: 0
   staticFriction2: 0
