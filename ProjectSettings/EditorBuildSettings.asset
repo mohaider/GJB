@@ -6,4 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Levels/Level1 - Warehouse.unity
+    path: Assets/AmitStuff/MainMenu.unity
+  - enabled: 1
+    path: Assets/_Levels/Jerome/Level 1 - WareHouse.unity
+  - enabled: 1
+    path: Assets/_Levels/Jerome/Level 2 - The Shelves.unity
+  - enabled: 1
+    path: Assets/_Levels/Jerome/Level 3 - The Stack.unity
+  - enabled: 1
+    path: Assets/_Levels/Cedrick/Cedrick_Desgagne_Level.unity
