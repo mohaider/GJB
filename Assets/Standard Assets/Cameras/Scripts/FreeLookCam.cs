@@ -79,7 +79,7 @@ namespace UnityStandardAssets.Cameras
 				y = CrossPlatformInputManager.GetAxis ("Mouse Y");
 			} else {
 				x = CrossPlatformInputManager.GetAxis ("HorizontalRightStick");
-				y = CrossPlatformInputManager.GetAxis ("VerticalRightStick");
+				y = CrossPlatformInputManager.GetAxis ("VerticalRightStick");//test
 			}
 
 

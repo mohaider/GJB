@@ -12,7 +12,6 @@ GameObject:
   - 92: {fileID: 9245106}
   - 124: {fileID: 12478270}
   - 81: {fileID: 8128094}
-  - 114: {fileID: 11476012}
   - 114: {fileID: 11449644}
   - 114: {fileID: 11436752}
   m_Layer: 0
@@ -126,7 +125,7 @@ GameObject:
   m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &195576
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +143,7 @@ GameObject:
   m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -190,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.32999992, z: -2.00999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 482958}
@@ -436,9 +435,8 @@ MonoBehaviour:
   m_FollowVelocity: 0
   m_FollowTilt: 1
   m_SpinTurnLimit: 180
-  m_TargetVelocityLowerLimit: 4
+  m_TargetVelocityLowerLimit: 2
   m_SmoothTurnTime: .200000003
-  m_Distance: {x: 0, y: 2.31999993, z: -2.46000004}
 --- !u!114 &11411560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,12 +452,13 @@ MonoBehaviour:
   m_AutoTargetPlayer: 1
   m_UpdateType: 1
   m_MoveSpeed: 999
-  m_TurnSpeed: 10
+  m_TurnSpeed: 4.13999987
   m_TurnSmoothing: 0
   m_TiltMax: 75
-  m_TiltMin: 45
+  m_TiltMin: 10
   m_LockCursor: 0
   m_VerticalAutoReturn: 0
+  usingMouse: 0
 --- !u!114 &11416682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,7 +489,6 @@ MonoBehaviour:
   m_BuildTargetGroup: 0
   m_Content: []
   m_MonoBehaviours:
-  - {fileID: 11476012}
   - {fileID: 11449644}
   m_ChildrenOfThisObject: 0
 --- !u!114 &11437362
@@ -566,35 +564,6 @@ MonoBehaviour:
   visualiseInEditor: 1
   closestDistance: .5
   dontClipTag: Player
---- !u!114 &11476012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd70d448b18cfbc46af26466f752332c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visualizeFocus: 0
-  focalLength: 10
-  focalSize: .699999988
-  aperture: 16
-  focalTransform: {fileID: 0}
-  maxBlurSize: 1
-  highResolution: 0
-  blurType: 0
-  blurSampleCount: 0
-  nearBlur: 0
-  foregroundOverlap: 4
-  dofHdrShader: {fileID: 4800000, guid: acd613035ff3e455e8abf23fdc8c8c24, type: 3}
-  dx11BokehShader: {fileID: 4800000, guid: d8e82664aa8686642a424c88ab10164a, type: 3}
-  dx11BokehThreshold: .5
-  dx11SpawnHeuristic: .0874999985
-  dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
-  dx11BokehScale: 1.20000005
-  dx11BokehIntensity: 2.5
 --- !u!114 &11489714
 MonoBehaviour:
   m_ObjectHideFlags: 1
