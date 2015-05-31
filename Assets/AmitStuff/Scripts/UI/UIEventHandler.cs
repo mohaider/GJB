@@ -14,6 +14,7 @@ public class UIEventHandler : MonoBehaviour {
 		controlsCanvas.SetActive (false);
 		creditsCanvas.SetActive (false);
 		playCanvas.SetActive (false);
+		leaderBoardCanvas.SetActive(false);
 	}
 	
 	// Update is called once per frame
