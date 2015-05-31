@@ -5,6 +5,7 @@ public class StickTogether : MonoBehaviour {
 
 	GameObject parent;
 	bool stickedTogether;
+	FixedJoint myJoint;
 	// Use this for initialization
 	void Start () {
 		parent = this.transform.parent.gameObject;
@@ -13,7 +14,7 @@ public class StickTogether : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
 	FixedJoint temp;
@@ -21,9 +22,8 @@ public class StickTogether : MonoBehaviour {
 		Debug.Log (col.name);
 
 		if (stickedTogether) {
-			if (col.name.Contains("Fork")/* || col.name.Contains("CrashBlocker")*/) {
-				temp = parent.GetComponent<FixedJoint>();
-				if (temp != null) {
+			if (col.name.Contains("Fork") || col.name.Contains("CrashBlocker")) {
+				if (myJoint != null) {
 					Destroy(temp);
 					stickedTogether = false;
 				}
@@ -33,8 +33,8 @@ public class StickTogether : MonoBehaviour {
 			if (col.name.Contains ("StickTop") && this.gameObject.name.Contains("StickBottom")) {
 				Debug.Log((col.bounds.center - this.gameObject.GetComponent<Collider>().bounds.center).magnitude);
 				if ((col.bounds.center - this.gameObject.GetComponent<Collider>().bounds.center).magnitude < 0.25f) {
-					parent.AddComponent<FixedJoint>();
-					parent.GetComponent<FixedJoint>().connectedBody=col.transform.parent.gameObject.GetComponent<Rigidbody>();
+					myJoint = parent.AddComponent<FixedJoint>();
+					myJoint.connectedBody=col.transform.parent.gameObject.GetComponent<Rigidbody>();
 					stickedTogether = true;
 				}
 
