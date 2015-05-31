@@ -208,7 +208,6 @@ PlayerSettings:
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
-  psp2NPTitleDatPath: 
   psp2NPCommsID: 
   psp2NPCommunicationsID: 
   psp2NPCommsPassphrase: 
@@ -223,7 +222,6 @@ PlayerSettings:
   psp2PatchOriginalPackage: 
   psp2PackagePassword: 2tusZBauFkrFCJCmZFOv1QDIIXJNZI95
   psp2KeystoneFile: 
-  psp2MemoryExpansionMode: 0
   psp2DRMType: 0
   psp2StorageType: 0
   psp2MediaCapacity: 0
@@ -252,7 +250,16 @@ PlayerSettings:
   psp2InfoBarColor: 0
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: CROSS_PLATFORM_INPUT
+    2: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    14: MOBILE_INPUT
+    15: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    16: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    17: MOBILE_INPUT
+    20: MOBILE_INPUT
   metroPackageName: GJB
   metroPackageLogo: 
   metroPackageLogo140: 
@@ -359,7 +366,6 @@ PlayerSettings:
   XboxOnePackagingOverridePath: 
   XboxOneAppManifestOverridePath: 
   XboxOnePackageEncryption: 0
-  XboxOnePackageUpdateGranularity: 2
   XboxOneDescription: 
   XboxOneIsContentPackage: 0
   XboxOneEnableGPUVariability: 0
@@ -367,9 +373,31 @@ PlayerSettings:
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
-  intPropertyNames: []
+  intPropertyNames:
+  - Metro::ScriptingBackend
+  - WP8::ScriptingBackend
+  - WebGL::ScriptingBackend
+  - WebGL::audioCompressionFormat
+  - WebGL::exceptionSupport
+  - WebGL::memorySize
+  - iOS::Architecture
+  - iOS::ScriptingBackend
+  Metro::ScriptingBackend: 2
+  WP8::ScriptingBackend: 2
+  WebGL::ScriptingBackend: 1
+  WebGL::audioCompressionFormat: 4
+  WebGL::exceptionSupport: 0
+  WebGL::memorySize: 256
+  iOS::Architecture: 2
+  iOS::ScriptingBackend: 0
   boolPropertyNames:
+  - WebGL::dataCaching
   - XboxOne::enus
+  WebGL::dataCaching: 0
   XboxOne::enus: 1
-  stringPropertyNames: []
+  stringPropertyNames:
+  - WebGL::emscriptenArgs
+  - WebGL::template
+  WebGL::emscriptenArgs: 
+  WebGL::template: APPLICATION:Default
   firstStreamedLevelWithResources: 0
