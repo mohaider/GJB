@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b3d838f20ec3eae41a7c7201c5527789
 timeCreated: 1433030638
+=======
+guid: 4e349fea0fa841b46bb3be148249cb42
+timeCreated: 1433030819
+>>>>>>> CANNOT CRASH OBJECT NO MORE
 licenseType: Pro
 NativeFormatImporter:
   userData: 

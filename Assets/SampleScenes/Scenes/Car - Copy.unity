@@ -441,17 +441,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 193838, guid: 546747b97b0432b44b1022f59e4e30c1, type: 2}
   m_PrefabInternal: {fileID: 442505895}
---- !u!114 &245685952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 245685947}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd49ed2ed5085b54fb031ff28ac2a422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &248805770
 Prefab:
   m_ObjectHideFlags: 0
@@ -4658,7 +4647,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11460536, guid: 96d16e8450f3dc24cae39258e235ed2a, type: 2}
       propertyPath: UsingKeyboard
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11419388, guid: 96d16e8450f3dc24cae39258e235ed2a, type: 2}
       propertyPath: m_Topspeed
