@@ -983,6 +983,21 @@ Prefab:
       propertyPath: UsingKeyboard
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6578972, guid: e3f0d5f7e9b7cf34cba273c04ffe8fb1, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 834e96879e382c34190ad8fc6bf43668,
+        type: 2}
+    - target: {fileID: 6524678, guid: e3f0d5f7e9b7cf34cba273c04ffe8fb1, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 834e96879e382c34190ad8fc6bf43668,
+        type: 2}
+    - target: {fileID: 6503218, guid: e3f0d5f7e9b7cf34cba273c04ffe8fb1, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 834e96879e382c34190ad8fc6bf43668,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3f0d5f7e9b7cf34cba273c04ffe8fb1, type: 2}
   m_IsPrefabParent: 0
