@@ -1,9 +1,21 @@
 fileFormatVersion: 2
-guid: 6d265a310cc322746824499d6f10e1b4
+guid: a99742624b036e7488647d31a09b0f3c
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
+    100000: box
+    100002: Omni01
+    100004: //RootNode
+    400000: box
+    400002: Omni01
+    400004: //RootNode
+    2300000: box
+    2300002: Omni01
+    3300000: box
+    3300002: Omni01
     4300000: box
+    4300002: Omni01
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3
