@@ -8,6 +8,7 @@ namespace UnityStandardAssets.Vehicles.Car
     [RequireComponent(typeof (CarController))]
     public class CarUserControl2 : MonoBehaviour
     {
+		private ConfigurableJoint cj ;
         private CarController m_Car; // the car controller we want to use
 		public bool UsingKeyboard;
 
@@ -15,6 +16,9 @@ namespace UnityStandardAssets.Vehicles.Car
         {
             // get the car controller
             m_Car = GetComponent<CarController>();
+			cj = GetComponent<ConfigurableJoint> ();
+			GameObject oj = GameObject.FindGameObjectWithTag ("Fork");
+			cj.connectedBody = oj.GetComponent<Rigidbody> ();
         }
 
 
