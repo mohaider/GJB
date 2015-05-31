@@ -8,7 +8,9 @@ public class StopDownSpeed : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider col) {
-		Debug.Log (col.name);
+		if (col.name == "Plane")
+			return;
+
 		if (col.tag.Equals ("Moveable") || col.transform.parent.tag.Equals("Moveable")) {
 			Debug.Log("Stop Message Sent");
 			controller.StopDownMovement();
