@@ -22,7 +22,7 @@ public class LaserPointer : MonoBehaviour {
 		m_lineRenderer.SetColors (m_PointerLight.color, m_PointerLight.color);
 		m_lineRenderer.SetWidth (maxWidth,maxWidth);
 		m_lineRenderer.material = mat;
-		lift = GameObject.FindGameObjectWithTag ("Player");
+		
 	}
 	
 	// Update is called once per frame
