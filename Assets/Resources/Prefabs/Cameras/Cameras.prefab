@@ -49,6 +49,7 @@ GameObject:
   - 124: {fileID: 12496262}
   - 81: {fileID: 8152048}
   - 114: {fileID: 11485940}
+  - 114: {fileID: 11429868}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -239,8 +240,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192422}
-  m_LocalRotation: {x: -.140279144, y: -.0155519666, z: -.00220368104, w: .989987433}
-  m_LocalPosition: {x: .349999994, y: .151478574, z: -3.96000004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 482518}
@@ -476,6 +477,33 @@ MonoBehaviour:
   - {fileID: 195576}
   - {fileID: 193838}
   - {fileID: 175254}
+--- !u!114 &11429868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f0dcf603e9e5b4f8d31988975f4bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualizeSSAO: 0
+  radius: .469999999
+  bias: -.0410000011
+  bilateralDepthTolerance: .319999993
+  zThickness: 2.3499999
+  occlusionIntensity: 1.16999996
+  sampleDistributionCurve: 1.19000006
+  colorBleedAmount: .758000016
+  brightnessThreshold: .200000003
+  drawDistance: 500
+  drawDistanceFadeSize: 1
+  reduceSelfBleeding: 1
+  useDownsampling: 0
+  halfSampling: 0
+  preserveDetails: 0
+  attachedCamera: {fileID: 2067896}
 --- !u!114 &11436752
 MonoBehaviour:
   m_ObjectHideFlags: 1
