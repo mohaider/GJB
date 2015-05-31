@@ -26,8 +26,8 @@ namespace UnityStandardAssets.Vehicles.Car
 		
 			float horizontalRightStick = CrossPlatformInputManager.GetAxis ("RT");
 			float verticalRightStick = CrossPlatformInputManager.GetAxis ("LT");
-			Debug.Log ("hv " +horizontalRightStick);
-			Debug.Log ("vv "+verticalRightStick);
+			//Debug.Log ("hv " +horizontalRightStick);
+			//Debug.Log ("vv "+verticalRightStick);
 #if !MOBILE_INPUT
             float handbrake = CrossPlatformInputManager.GetAxis("Jump");
 			if(!UsingKeyboard)
