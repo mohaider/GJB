@@ -10,10 +10,10 @@ public class StopDownSpeed : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.name == "Plane")
 			return;
-
-		if (col.tag.Equals ("Moveable") || col.transform.parent.tag.Equals("Moveable")) {
-			Debug.Log("Stop Message Sent");
-			controller.StopDownMovement();
+	
+			if (col.tag.Equals ("Moveable") || (col.transform.parent != null && col.transform.parent.tag.Equals("Moveable"))) {
+				Debug.Log("Stop Message Sent");
+				controller.StopDownMovement();
 		}
 	}
 }
