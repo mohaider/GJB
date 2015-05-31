@@ -11,6 +11,7 @@ GameObject:
   - 198: {fileID: 19833468}
   - 199: {fileID: 19949298}
   - 114: {fileID: 11479162}
+  - 114: {fileID: 11474748}
   m_Layer: 0
   m_Name: Explosion_Huge_Classic
   m_TagString: Untagged
@@ -360,6 +361,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 480316}
   m_RootOrder: 1
+--- !u!114 &11474748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8dfa29dfd44994ba705451dbee7785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11479162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,6 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af19da7458dc9174699d0b34f404eafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DespawnDelay: 0
+  DespawnOnMouseUp: 0
 --- !u!198 &19817216
 ParticleSystem:
   m_ObjectHideFlags: 1
