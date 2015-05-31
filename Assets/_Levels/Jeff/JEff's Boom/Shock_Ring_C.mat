@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Shock_Ring
+  m_Name: Shock_Ring_C
   m_Shader: {fileID: 4800000, guid: cddf182bba6e59041ae50570a06d28a7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -84,4 +84,4 @@ Material:
       data:
         first:
           name: _Tint
-        second: {r: .595588207, g: .422232807, b: .236483559, a: 1}
+        second: {r: .456899434, g: .236483559, b: .595588207, a: 1}
