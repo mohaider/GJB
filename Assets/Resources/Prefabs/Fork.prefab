@@ -62,7 +62,7 @@ GameObject:
   - 114: {fileID: 11426714}
   m_Layer: 0
   m_Name: Fork
-  m_TagString: Untagged
+  m_TagString: Fork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162934}
   m_LocalRotation: {x: -.500000119, y: -.5, z: -.49999994, w: .5}
-  m_LocalPosition: {x: -.175999999, y: 1.148, z: -2.7249999}
+  m_LocalPosition: {x: -.103, y: .61500001, z: -14.2360001}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 486052}
