@@ -9,6 +9,11 @@ public class GoalController : MonoBehaviour {
 	GameObject[] moveables;
 	bool first = true;
 
+	public string nextMap;
+
+	float nextMapTimer = 0.0f;
+	bool nextmap = false;
+
 	void Start() {
 		moveables = GameObject.FindGameObjectsWithTag(tagOfScoreableObjects);
 		lengthX = this.gameObject.GetComponent<Renderer> ().bounds.extents.x;
@@ -16,7 +21,8 @@ public class GoalController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		if (col.name.Contains ("Fork") && first) {
+		Debug.Log (col.name);
+		if ((col.name.Contains ("Fork") || col.name.Contains("CrashBlocker")) && first) {
 			Debug.Log("SCOREING");
 			foreach(GameObject m in moveables) {
 				if ((m.transform.position.x > this.transform.position.x - lengthX)
@@ -30,8 +36,15 @@ public class GoalController : MonoBehaviour {
 					score++;
 				}
 			}
-
+			nextmap = true;
 			first = false;
+		}
+
+		if (nextmap) {
+			nextMapTimer += Time.deltaTime;
+			if (nextMapTimer > 5.0f) {
+				Application.LoadLevel(nextMap);
+			}
 		}
 	}
 
