@@ -34,7 +34,8 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
 			float horizontalRightStick = CrossPlatformInputManager.GetAxis ("RT");
-			float verticalRightStick = CrossPlatformInputManager.GetAxis ("LT");
+			float verticalRightStick = CrossPlatformInputManager.GetAxis ("LT")*-1f;
+
 			//Debug.Log (horizontalRightStick);
 			//Debug.Log (verticalRightStick);
 #if !MOBILE_INPUT

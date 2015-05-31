@@ -11,8 +11,8 @@ public class test : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float h = Input.GetAxisRaw ("RT");
-		Debug.Log ("RT" + h);
+		Debug.Log ("RT " + h);
 		float b = Input.GetAxisRaw ("LT");
-		Debug.Log ("LT" + b);
+		Debug.Log ("LT " + b);
 	}
 }

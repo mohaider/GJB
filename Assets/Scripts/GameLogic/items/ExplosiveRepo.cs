@@ -13,6 +13,10 @@ public class ExplosiveRepo : MonoBehaviour {
 
 	public  ExplosionState explosiveState;
 
+
+
+
+
 	private static ExplosiveRepo m_instance;
 	
 
