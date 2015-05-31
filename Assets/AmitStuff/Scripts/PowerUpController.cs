@@ -199,6 +199,7 @@ public class PowerUpController : MonoBehaviour {
 		if (powerUpsOn [(int)PowerUp.STICKYGLUE]) {
 
 			Debug.Log("IMPLEMENT STICKY GLUE");
+			// TODO: set all objects on the lift to kinematic
 
 			StickyGlueTimer += Time.deltaTime;
 			if (lengthOfPowerUpStickyGlue < StickyGlueTimer) {
