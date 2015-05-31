@@ -50,7 +50,7 @@ public class ForkLiftController : MonoBehaviour {
 		else if (Input.GetKeyUp(KeyCode.P)) {
 			upPressed = false;
 		}
-		if (Input.GetKey (KeyCode.O)) {
+		if (allowedDownMovement && Input.GetKey (KeyCode.O)) {
 			if (!downPressed) {
 				downPressed = true;
 				liftMoveTimer = 0.0f;
@@ -68,6 +68,7 @@ public class ForkLiftController : MonoBehaviour {
 	}
 
 	void MoveForkUp() {
+		allowedDownMovement = true;
 		forkLiftRigidBody.AddForce(Vector3.up * 20.0f, ForceMode.Acceleration);
 		forkLiftRigidBody.velocity = Vector3.zero;
 		forkLiftRigidBody.angularVelocity = Vector3.zero;
@@ -80,5 +81,12 @@ public class ForkLiftController : MonoBehaviour {
 		forkLiftRigidBody.angularVelocity = Vector3.zero;
 
 		//this.transform.localPosition = new Vector3(0.0f, Mathf.Lerp(currentPos.y, botPos.y, liftMoveTimer), 1.16f);
+	}
+
+	bool allowedDownMovement = false;
+	public void StopDownMovement() {
+		MoveForkUp ();
+		allowedDownMovement = false;
+
 	}
 }
