@@ -34,7 +34,7 @@ public class LaserPointer : MonoBehaviour {
 		
 		
 		if (Physics.SphereCast (tPosition, 0.5f,forwardVector, out m_hit, MaxDistance,m_LayerMask)) {
-			print ("colliding!~");
+
 			Vector3 hitpoint =transform.position+ forwardVector * m_hit.distance;
 			m_PointerLight.transform.position = hitpoint;
 			m_lineRenderer.SetPosition (1, hitpoint);

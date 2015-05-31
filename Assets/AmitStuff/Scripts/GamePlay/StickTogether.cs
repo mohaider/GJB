@@ -13,26 +13,31 @@ public class StickTogether : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	float timer = 50.0f;
 	void Update () {
-		
+		//if (stickedTogether && timer < Time.deltaTime * 2.1f) {
+			//timer += Time.deltaTime;
+		//}
 	}
 
 	FixedJoint temp;
 	void OnTriggerEnter(Collider col) {
-		Debug.Log (col.name);
+		//Debug.Log (col.name);
 
 		if (stickedTogether) {
 			if (col.name.Contains("Fork") || col.name.Contains("CrashBlocker")) {
-				Debug.Log("Separate Sticked Together");
+				Debug.Log("Separate Sticked Together" + myJoint.ToString());
 				if (myJoint != null) {
-					Destroy(temp);
-					stickedTogether = false;
+					Debug.Log("Separate Sticked Together2" + myJoint.ToString());
+					Destroy(myJoint);
+					//stickedTogether = false;
+					//timer = 0.0f;
 				}
 			}
 		} 
 		else {
-			if (col.name.Contains ("StickTop") && this.gameObject.name.Contains("StickBottom")) {
-				Debug.Log((col.bounds.center - this.gameObject.GetComponent<Collider>().bounds.center).magnitude);
+			if (/*timer > Time.deltaTime * 2.1f &&*/ col.name.Contains ("StickTop") && this.gameObject.name.Contains("StickBottom")) {
+
 				if ((col.bounds.center - this.gameObject.GetComponent<Collider>().bounds.center).magnitude < 0.25f) {
 					myJoint = parent.AddComponent<FixedJoint>();
 					myJoint.connectedBody=col.transform.parent.gameObject.GetComponent<Rigidbody>();
