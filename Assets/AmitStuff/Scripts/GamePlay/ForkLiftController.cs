@@ -24,7 +24,7 @@ public class ForkLiftController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.P) && Input.GetKey (KeyCode.O)) {
+		if (Input.GetButton("ForkliftUp") && Input.GetButton ("ForkliftDown")) {
 			upPressed = downPressed = false;
 			return;
 		}
@@ -70,16 +70,16 @@ public class ForkLiftController : MonoBehaviour {
 	
 	void MoveForkUp() {
 		allowedDownMovement = true;
-		forkLiftRigidBody.AddForce(Vector3.up * 20.0f, ForceMode.Acceleration);
-		forkLiftRigidBody.velocity = Vector3.zero;
-		forkLiftRigidBody.angularVelocity = Vector3.zero;
+		forkLiftRigidBody.AddForce(Vector3.up * 20.0f);
+		//forkLiftRigidBody.velocity = Vector3.zero;
+		//forkLiftRigidBody.angularVelocity = Vector3.zero;
 		
 		//this.transform.localPosition = new Vector3(0.0f, Mathf.Lerp(currentPos.y, topPos.y, liftMoveTimer), 1.16f);
 	}
 	void MoveForkDown() {
 		forkLiftRigidBody.AddForce(-Vector3.up * 20.0f);
-		forkLiftRigidBody.velocity = Vector3.zero;
-		forkLiftRigidBody.angularVelocity = Vector3.zero;
+		//forkLiftRigidBody.velocity = Vector3.zero;
+		//forkLiftRigidBody.angularVelocity = Vector3.zero;
 		
 		//this.transform.localPosition = new Vector3(0.0f, Mathf.Lerp(currentPos.y, botPos.y, liftMoveTimer), 1.16f);
 	}
