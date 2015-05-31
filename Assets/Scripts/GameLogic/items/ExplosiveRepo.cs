@@ -38,6 +38,11 @@ public class ExplosiveRepo : MonoBehaviour {
 	void Start () {
 	
 	}
+
+	void Awake()
+	{
+
+	}
 	
 	// Update is called once per frame
 	void Update () {
