@@ -23,7 +23,8 @@ namespace UnityStandardAssets.Vehicles.Car
             // pass the input to the car!
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-		
+
+
 			float horizontalRightStick = CrossPlatformInputManager.GetAxis ("RT");
 			float verticalRightStick = CrossPlatformInputManager.GetAxis ("LT");
 			Debug.Log (horizontalRightStick);
