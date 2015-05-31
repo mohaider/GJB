@@ -3,10 +3,12 @@ using System.Collections;
 
 public class StickTogether : MonoBehaviour {
 
-
+	GameObject parent;
+	bool stickedTogether;
 	// Use this for initialization
 	void Start () {
-	
+		parent = this.transform.parent.gameObject;
+		stickedTogether = false;
 	}
 	
 	// Update is called once per frame
@@ -14,11 +16,32 @@ public class StickTogether : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.name.Contains ("WoodenPallet") || col.gameObject.name.Contains ("carton_small")) {
-			gameObject.AddComponent<FixedJoint>();
-			gameObject.GetComponent<FixedJoint>().connectedBody=col.rigidbody;
+	FixedJoint temp;
+	void OnTriggerEnter(Collider col) {
+		Debug.Log (col.name);
 
+		if (stickedTogether) {
+			if (col.name.Contains("Fork")/* || col.name.Contains("CrashBlocker")*/) {
+				temp = parent.GetComponent<FixedJoint>();
+				if (temp != null) {
+					Destroy(temp);
+					stickedTogether = false;
+				}
+			}
+		} 
+		else {
+			if (col.name.Contains ("StickTop") && this.gameObject.name.Contains("StickBottom")) {
+				Debug.Log((col.bounds.center - this.gameObject.GetComponent<Collider>().bounds.center).magnitude);
+				if ((col.bounds.center - this.gameObject.GetComponent<Collider>().bounds.center).magnitude < 0.25f) {
+					parent.AddComponent<FixedJoint>();
+					parent.GetComponent<FixedJoint>().connectedBody=col.transform.parent.gameObject.GetComponent<Rigidbody>();
+					stickedTogether = true;
+				}
+
+
+			}
 		}
+
+
 	}
 }
